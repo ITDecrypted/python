@@ -26,8 +26,9 @@ with open("c:/users/queen/documents/testexcel.csv", 'w') as file:
     # Used to sort the dictionary
     # reverse parameter set to True for descending order
     # Lambda used to specify the sort key, i.e. the first integer in the list of values
-    # (side note: item[1] also works, but smells)
-    productReport = {k: v for k, v in sorted(productReport.items(), key=lambda item: item[1][0], reverse=True)}
+    # (side note: item[1][0] also works, but item[1] works because if item[1][0] is the same,
+    # then item[1][1] will be compared as well)
+    productReport = {k: v for k, v in sorted(productReport.items(), key=lambda item: item[1], reverse=True)}
 
     for key,value in productReport.items():
 
