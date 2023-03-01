@@ -8,6 +8,9 @@ import argparse
 # For objects that represent paths to files or directories
 from pathlib import Path
 
+# For error messages
+import sys
+
 parser = argparse.ArgumentParser()
 
 # Positional argument
