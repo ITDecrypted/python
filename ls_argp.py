@@ -8,9 +8,6 @@ import argparse
 # For objects that represent paths to files or directories
 from pathlib import Path
 
-# For error messages
-import sys
-
 parser = argparse.ArgumentParser()
 
 # Positional argument
@@ -29,7 +26,7 @@ dir_ = Path(args.path)
 
 # The rest is the same as ls_cli.py
 if not dir_.is_dir():
-	sys.exit(f'{dir_} is not a directory')
+	parser.error(f'{dir_} is not a directory')
 
 for entry in dir_.iterdir():
 	print(entry.name)
