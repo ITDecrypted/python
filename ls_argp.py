@@ -3,12 +3,12 @@
 # This object will handle details such as how many arguments are allowed.
 
 # Powerful argument handler
-import argparse
+from argparse import ArgumentParser
 
 # For objects that represent paths to files or directories
 from pathlib import Path
 
-parser = argparse.ArgumentParser()
+parser = ArgumentParser()
 
 # Positional argument
 # Reference: https://docs.python.org/3/library/
